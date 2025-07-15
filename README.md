@@ -18,7 +18,7 @@ Transform the honey-collecting mechanics of Bee Swarm Simulator into a high-tech
 ### Nanobot Formation System
 
 The game’s standout feature is the **Photoshop Tool-based formation control**:
-# UNDER DEVELOPMENT
+### *UNDER DEVELOPMENT*
 - **Selection Tool**: Square/rectangular formations
 - **Lasso Tool**: Organic curved swarms
 - **Brush Tool**: Circular formations with varying sizes
@@ -40,6 +40,7 @@ The game’s standout feature is the **Photoshop Tool-based formation control**:
 - **Nanobot Evolution**: Different protocols (attack, defense, collection) 
 - **Motherboard/Mainframe**: Base management system
 - **Network Exploration**: Various data sectors to unlock
+- **Upgrade data storage types and tools, from a pencil and paper, to a high powered SSD, or even Cloud Storage!
 - **Digital Economy**: Data as currency!
 
 ## 🛠 Technical Implementation
@@ -104,7 +105,7 @@ This project is in active development. Key areas for contribution:
 
 1. Download the Roblox Studio Model File
 
-*I will continue to fill this out as needed.
+*I will continue to fill this out as needed.*
 
 -----
 
