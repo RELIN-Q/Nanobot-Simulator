@@ -103,7 +103,11 @@ This project is in active development. Key areas for contribution:
 
 ## 📋 Getting Started
 
-1. Download the Roblox Studio Model File
+1. Download the ZIP and extract
+2. Open BSS KIT 7 in a fresh instance of Roblox Studio
+3. Ungroup each package into their respective areas
+4. Replace existing script files in the ungrouped files with the github-updated files
+5. (OPTIONAL) Install GitPush plugin and connect it with a new branch (or a copy of the existing repository - not recommended)
 
 *I will continue to fill this out as needed.*
 
