@@ -10,7 +10,7 @@ Transform the honey-collecting mechanics of Bee Swarm Simulator into a high-tech
 
 - **Setting**: Artificial computer world with Matrix/Tron aesthetics
 - **Collectors**: Nanobots instead of bees
-- **Resources**: Data Nodes, upgrade chips, and computer parts
+- **Resources**: Data Nodes, Gigabucks, and Microchips
 - **Environment**: Network nodes, data sectors, digital landscapes
 
 ## 🚀 Key Features
