@@ -107,7 +107,7 @@ This project is in active development. Key areas for contribution:
 2. Open BSS KIT 7 in a fresh instance of Roblox Studio
 3. Ungroup each package into their respective areas
 4. Replace existing script files in the ungrouped files with the github-updated files
-5. (OPTIONAL) Install GitPush plugin and connect it with a new branch (or a copy of the existing repository - not recommended)
+5. (OPTIONAL) Install [GitSync plugin](https://create.roblox.com/store/asset/138677233030370/GitSync) and connect it with a new branch that you make in GitHub (or a copy of the existing repository - not recommended)
 
 *I will continue to fill this out as needed.*
 
