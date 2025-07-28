@@ -2,6 +2,7 @@
 local bee = {}
 
 bee.Eggs = {
+	--[[
 	["Basic Egg"] = {
 		["Basic Bee"] = 75,
 		["Honey Bee"] = 2,
@@ -11,7 +12,48 @@ bee.Eggs = {
 		["Rad Bee"] = 5,
 		["Tadpole Bee"] = 0.05
 	},
-	["Royal Jelly"] = {
+	["Mythic Egg"] = {
+		["Tadpole Bee"] = 100
+	},
+	["Vicious Bee Egg"] = {
+		["Vicious Bee"] = 100
+	},]]
+	["Primary Module"] = {
+		["Primary Nanobot"] = 100
+	},
+	["Basic Nano-Mod"] = {
+		["Basic Nanobot"] = 100
+	},
+	["Silver Nano-Mod"] = {
+		["Basic Nanobot"] = 100
+	},
+	["Gold Nano-Mod"] = {
+		["Basic Nanobot"] = 100
+	},
+	["Diamond Nano-Mod"] = {
+		["Basic Nanobot"] = 100
+	},
+	["Mythic Nano-Mod"] = {
+		["Basic Nanobot"] = 100
+	},
+	
+	["Basic Gifted Nano-Mod"] = {
+		["Basic Nanobot"] = 100
+	},
+	["Silver Gifted Nano-Mod"] = {
+		["Basic Nanobot"] = 100
+	},
+	["Gold Gifted Nano-Mod"] = {
+		["Basic Nanobot"] = 100
+	},
+	["Diamond Gifted Nano-Mod"] = {
+		["Basic Nanobot"] = 100
+	},
+	["Mythic Gifted Nano-Mod"] = {
+		["Basic Nanobot"] = 100
+	},
+	
+	["Protocol Converter"] = {
 		["Honey Bee"] = 15,
 		["Hasty Bee"] = 35,
 		["Brave Bee"] = 25,
@@ -19,7 +61,7 @@ bee.Eggs = {
 		["Diamond Basic Bee"] = 5,
 		["Tadpole Bee"] = 1
 	},
-	["Star Jelly"] = {
+	["Star Protocol Converter"] = {
 		["Honey Bee"] = 15,
 		["Hasty Bee"] = 35,
 		["Brave Bee"] = 25,
@@ -27,44 +69,38 @@ bee.Eggs = {
 		["Cool Bee"] = 35,
 		["Tadpole Bee"] = 1
 	},
-	["Mythic Egg"] = {
-		["Tadpole Bee"] = 100
-	},
-	["Vicious Bee Egg"] = {
-		["Vicious Bee"] = 100
-	},
-	["Primary Module"] = {
-		["Primary Nanobot"] = 100
-	},
-	["Basic Nano-Mod"] = {
-		["Basic Nanobot"] = 100
-	}
 }
 
 bee.LevelBonds = {
 	[1] = 0,
 	[2] = 100,
-	[3] = 500,
-	[4] = 1500,
-	[5] = 3500,
-	[6] = 7500,
-	[7] = 15000,
-	[8] = 30000,
-	[9] = 90000,
-	[10] = 300000,
-	[11] = 900000,
-	[12] = 1900000,
-	[13] = 3000000,
-	[14] = 5900000,
-	[15] = 8000000,
-	[16] = 12000000,
-	[17] = 15000000,
-	[18] = 20000000,
-	[19] = 25000000,
-	[20] = 30000000
+	[3] = 250,
+	[4] = 550,
+	[5] = 1100,
+	[6] = 2000,
+	[7] = 3500,
+	[8] = 6000,
+	[9] = 10000,
+	[10] = 16000,
+	[11] = 25000,
+	[12] = 38000,
+	[13] = 58000,
+	[14] = 85000,
+	[15] = 120000,
+	[16] = 180000,
+	[17] = 250000,
+	[18] = 350000,
+	[19] = 500000,
+	[20] = 900000,
+	[21] = 2000000,
+	[22] = 4000000,
+	[23] = 8000000,
+	[24] = 16000000,
+	[25] = 32000000
 }
 
 bee.BeeInfo = {
+	--[[
 	["Basic Bee"] = {
 		Icon = "rbxassetid://9749734105",
 		Description = "A basic bee.",
@@ -85,7 +121,7 @@ bee.BeeInfo = {
 			Power = 0.3,
 		},
 		WhenAttack = false
-	},
+	},]]
 	["Basic Nanobot"] = {
 		Icon = "rbxassetid://9749734105",
 		Description = "A basic Nanobot. One of many.",
@@ -127,7 +163,6 @@ bee.BeeInfo = {
 			Power = 0.3,
 		},
 		WhenAttack = false,
-		Primary = true
 	},
 	["Diamond Basic Bee"] = { --placeholder
 		Icon = "rbxassetid://9749734105",
@@ -298,6 +333,21 @@ bee.BeeInfo = {
 		}
 	},
 }
+
+bee.SlotColors = {
+	["Basic Bee"] = Color3.fromRGB(174, 121, 47),
+	["Basic Nanobot"] = Color3.fromRGB(174, 121, 47),
+	["Primary Nanobot"] = Color3.fromRGB(174, 121, 47),
+	["Honey Bee"] = Color3.fromRGB(245, 205, 48),
+	["Tadpole Bee"] = Color3.fromRGB(160, 105, 223),
+	["Hasty Bee"] = Color3.fromRGB(230, 230, 230),
+	["Brave Bee"] = Color3.fromRGB(230, 230, 230),
+	["Cool Bee"] = Color3.fromRGB(230, 230, 230),
+	["Rad Bee"] = Color3.fromRGB(230, 230, 230),
+	["Vicious Bee"] = Color3.fromRGB(109, 155, 69),
+	["Diamond Basic Bee"] = Color3.fromRGB(0, 242, 255),
+}
+
 function Randomer(tab)
 	local tw = 0
 	for _,v in pairs(tab) do
@@ -314,53 +364,11 @@ function Randomer(tab)
 		end
 	end
 end
-bee.SlotColors = {
-	["Basic Bee"] = Color3.fromRGB(174, 121, 47),
-	["Basic Nanobot"] = Color3.fromRGB(174, 121, 47),
-	["Primary Nanobot"] = Color3.fromRGB(174, 121, 47),
-	["Honey Bee"] = Color3.fromRGB(245, 205, 48),
-	["Tadpole Bee"] = Color3.fromRGB(160, 105, 223),
-	["Hasty Bee"] = Color3.fromRGB(230, 230, 230),
-	["Brave Bee"] = Color3.fromRGB(230, 230, 230),
-	["Cool Bee"] = Color3.fromRGB(230, 230, 230),
-	["Rad Bee"] = Color3.fromRGB(230, 230, 230),
-	["Vicious Bee"] = Color3.fromRGB(109, 155, 69),
-	["Diamond Basic Bee"] = Color3.fromRGB(0, 242, 255),
-}
 
 function spawner(func,...)
 	local co = coroutine.wrap(func)
 	co(...)
 end
-
-
-
---local NanoForms = require(script.Parent:WaitForChild("NanoForms"))
---local function getNanobotOffset(plr, pattern, index)
---	local root = plr.Character and plr.Character:FindFirstChild("HumanoidRootPart")
---	if not root then return Vector3.new() end
-
---	local rootCF = root.CFrame
---	local origin = root.Position
-
---	if index == 1 then
---		-- Absolute position behind & above
---		return origin + (-rootCF.LookVector * 6) + (rootCF.UpVector * 4)
---	end
-
---	local followerCount = #pattern
---	if followerCount < 1 then return origin end
-
---	local pat = pattern[((index - 2) % followerCount) + 1]
---	local baseCF = CFrame.new(origin + (-rootCF.LookVector * 6) + (rootCF.UpVector * 4), 
---		origin + rootCF.LookVector)
---	local worldPos = baseCF.Position + baseCF:VectorToWorldSpace(pat)
---	return worldPos
---end
-
-
-
-
 
 local flrScript = require(script.Parent:WaitForChild("FlowerScript"))
 function getCloseFlowerToPlayer(root,field)
@@ -378,6 +386,7 @@ function getCloseFlowerToPlayer(root,field)
 		return flrs[math.random(1,#flrs)]
 	end
 end
+
 local settingsMod = require(script.Parent:WaitForChild("Settings"))
 local ts = game:GetService("TweenService")
 
@@ -395,7 +404,7 @@ function IdleBee(Bee)
 		local plr = Bee.Owner.Value
 
 		-- Check if this is a Primary Nanobot
-		local isPrimary = Bee:FindFirstChild("Primary") ~= nil
+		local isPrimary = Bee:FindFirstChild("Primary Nanobot") ~= nil
 		if Bee.Energy.Value <= 1 then
 			require(game.ReplicatedStorage.Modules.NotificationModule).Create(plr, {Message=Bee.Name.." Is Going Go To Sleep😴", Type="Default"})
 			Bee.Sleeping.Value = true
@@ -519,7 +528,7 @@ function moveBee(Bee)
 		end
 
 		-- Check if this is a Primary Nanobot
-		local isPrimary = Bee:FindFirstChild("Primary") ~= nil
+		local isPrimary = Bee:FindFirstChild("Primary Nanobot") ~= nil
 
 		if Bee and Bee:FindFirstChild("Owner") and Bee.Owner.Value and Bee.Owner.Value.Character and Bee.Owner.Value.Character.Humanoid.Health >= 1 then
 			if Bee.Owner.Value.MakingHoney.Value == true then
@@ -600,7 +609,7 @@ function moveBee(Bee)
 							-- Primary Nanobot has more controlled combat positioning
 							Bee.XR.Value = 0
 							Bee.ZR.Value = 0
-							Bee.YR.Value = 6
+							Bee.YR.Value = 5
 						end
 					end
 					local spawnToken = false
@@ -686,6 +695,7 @@ function moveBee(Bee)
 		end
 	end
 end
+
 local Notis = require(script.Parent:WaitForChild("NotificationModule"))
 function bee.LevelUp(plr,Bee,slot)
 	local i,beeData = bee.FindBee(plr,slot,Bee)
@@ -701,7 +711,7 @@ function bee.Feed(plr,slot,Bee,Bond)
 	if beeData then
 		if beeData.Level < 20 then
 			_G.PlayerData[plr.Name].Bees[i].Bond += Bond
-			Notis.Create(plr,{Message=Bee.Name.." bond increased by "..Bond.." (".._G.PlayerData[plr.Name].Bees[i].Bond.."/"..bee.LevelBonds[_G.PlayerData[plr.Name].Bees[i].Level+1]..")!",Type="Default"})
+			Notis.Create(plr,{Message=Bee.Name.." EXP increased by "..Bond.." (".._G.PlayerData[plr.Name].Bees[i].Bond.."/"..bee.LevelBonds[_G.PlayerData[plr.Name].Bees[i].Level+1]..")!",Type="Default"})
 			repeat wait()
 				if _G.PlayerData[plr.Name].Bees[i].Bond >= bee.LevelBonds[_G.PlayerData[plr.Name].Bees[i].Level+1] then
 					bee.LevelUp(plr,Bee,slot)
@@ -842,7 +852,6 @@ function bee.LoadBee(plr,beee)
 		bee.NewModel(plr,beee.Bee,slot,beee.Level,beee.Gifted)
 	end
 end
-
 
 function bee.UpdateLevelHive(plr)
 	if plr.Hive.Value ~= nil then
