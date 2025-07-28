@@ -1,71 +1,435 @@
 -- @ScriptType: ModuleScript
 return {
-	["Basic Egg"] = {
-		Icon = "rbxassetid://11459121707",
-		Description = "Hatches into a Basic Bee",
-		UseableOnSlot = true,
-		UseableOcc = false
-	},
-	["Basic Nano-Mod"] = {
-		Icon = "rbxassetid://11459121707",
-		Description = "Installs a Basic Nanobot",
-		UseableOnSlot = true,
-		UseableOcc = false
-	},
-	["Primary Module"] = {
-		Icon = "rbxassetid://11459121707",
-		Description = "Installs the Primary Module",
-		UseableOnSlot = true,
-		UseableOcc = false
-	},
-	["Ticket"] = {
-		Icon = "rbxassetid://11713568550",
-		Description = "Used to buy things",
-		UseableOnSlot = false,
-		UseableOcc = false
-	},
+	--[[
 	["Vicious Bee Egg"] = {
 		Icon = "rbxassetid://11459121707",
 		Description = "Always hatches into a Vicious Bee",
 		UseableOnSlot = true,
 		UseableOcc = true
 	},
-	["Red Extract"] = {
-		Icon = "rbxassetid://2495935291",
-		Description = "Grants x1.5 Red Pollen for 10 minutes.",
-		UseableOnSlot = false,
-		UseableOcc = false,
-	},
-	["Red Extract Buff"] = {
-		StatName = "RedPollen",
-		Info = "x1.5 Red Pollen",
-		Icon = "rbxassetid://2495935291",
-		Clr = Color3.fromRGB(254, 198, 80)
-	},
-	["Blue Extract"] = {
-		Icon = "rbxassetid://5916120072",
-		Description = "Grants x1.5 Blue Pollen for 10 minutes.",
-		UseableOnSlot = false,
-		UseableOcc = false,
-	},
-	["Blue Extract Buff"] = {
-		StatName = "BluePollen",
-		Info = "x1.5 Blue Pollen",
-		Icon = "rbxassetid://5916120072",
-		Clr = Color3.fromRGB(254, 198, 80)
-	},
-	["Micro Converter"] = {
-		Icon = "rbxassetid://7041409606",
-		Description = "Convert All of your pollens to honey.",
-		UseableOnSlot = false,
-		UseableOcc = false,
-	},
 	["Mythic Egg"] = {
 		Icon = "rbxassetid://11579884963",
 		Description = "Hatches into a Mythic Bee",
 		UseableOnSlot = true,
 		UseableOcc = true
+	},]]
+	
+	-- NANO-MODS
+	
+	["Primary Module"] = { --New Egg
+		Icon = "rbxassetid://11459121707", --change
+		Description = "Installs the Primary Module.",
+		UseableOnSlot = true,
+		UseableOcc = false
 	},
+	["Basic Nano-Mod"] = { --Basic Egg
+		Icon = "rbxassetid://11459121707", --change
+		Description = "Installs a Basic Nanobot.",
+		UseableOnSlot = true,
+		UseableOcc = false
+	},
+	["Silver Nano-Mod"] = { --Silver Egg
+		Icon = "rbxassetid://11459121707", --change
+		Description = "Installs a Rare Nanobot.",
+		UseableOnSlot = true,
+		UseableOcc = false
+	},
+	["Gold Nano-Mod"] = { --Gold Egg
+		Icon = "rbxassetid://11459121707", --change
+		Description = "Installs a Super-Rare Nanobot",
+		UseableOnSlot = true,
+		UseableOcc = false
+	},
+	["Diamond Nano-Mod"] = { --Diamond Egg
+		Icon = "rbxassetid://11459121707", --change
+		Description = "Installs an Ultra-Rare Nanobot.",
+		UseableOnSlot = true,
+		UseableOcc = false
+	},
+	["Mythic Nano-Mod"] = { --Mythic Egg
+		Icon = "rbxassetid://11459121707", --change
+		Description = "Installs a Mythical Nanobot.",
+		UseableOnSlot = true,
+		UseableOcc = false
+	},
+	
+	-- STAR MODS
+	
+	["Star Nano-Mod"] = { --Star Egg
+		Icon = "rbxassetid://11459121707", --change
+		Description = "Always installs a Gifted Nanobot that you haven't unlocked!",
+		UseableOnSlot = true,
+		UseableOcc = false
+	},
+	["Gifted Silver Nano-Mod"] = { --Gifted Silver Egg
+		Icon = "rbxassetid://11459121707", --change
+		Description = "Installs a Rare Gifted Nanobot",
+		UseableOnSlot = true,
+		UseableOcc = false
+	},
+	["Gifted Gold Nano-Mod"] = { --Gifted Gold Egg
+		Icon = "rbxassetid://11459121707", --change
+		Description = "Installs a Super-Rare Gifted Nanobot",
+		UseableOnSlot = true,
+		UseableOcc = false
+	},
+	["Gifted Diamond Nano-Mod"] = { --Gifted Diamond Egg
+		Icon = "rbxassetid://11459121707", --change
+		Description = "Installs an Ultra-Rare Gifted Nanobot",
+		UseableOnSlot = true,
+		UseableOcc = false
+	},
+	["Gifted Mythic Nano-Mod"] = { --Gifted Mythic Egg
+		Icon = "rbxassetid://11459121707", --change
+		Description = "Installs a Gifted Mythical Nanobot",
+		UseableOnSlot = true,
+		UseableOcc = false
+	},
+	
+	-- MISC ITEMS
+
+	["Gigabucks"] = { --Ticket
+		Icon = "rbxassetid://11713568550", --change
+		Description = "Cold hard cash. Buy stuff at GigaMart.",
+		UseableOnSlot = false,
+		UseableOcc = false
+	},
+	["Data Injector"] = { --Sprinklers
+		Icon = "rbxassetid://13016351302", --change
+		Description = "Use while standing in Data Nodes to construct a Data Injector.",
+		UseableOnSlot = false,
+		UseableOcc = false,
+	},
+	["Data Corruptors"] = { --Gumdrops
+		Icon = "rbxassetid://13016678865", --change
+		Description = "Corrupts field Data Nodes to grant pure data.",
+		UseableOnSlot = false,
+		UseableOcc = false,
+	},
+	["Hack Enhancement"] = { --Stinger
+		Icon = "rbxassetid://13016678865", --change
+		Description = "Grants your Nanobots x1.5 attack for 30 seconds.",
+		UseableOnSlot = false,
+		UseableOcc = false,
+	},
+	["Wireless Uploader"] = { --Micro Converter
+		Icon = "rbxassetid://7041409606", --change
+		Description = "Convert all of your Bits into Data.",
+		UseableOnSlot = false,
+		UseableOcc = false,
+	},
+	["Data Leak Prevention"] = { --Honeysuckle
+		Icon = "rbxassetid://7041409606", --change
+		Description = "Your Nanobots instantly convert some Bits into Data when your storage becomes full. (Cooldown 30s)",
+		UseableOnSlot = false,
+		UseableOcc = false,
+	},
+	["Warp Capsule"] = { --Whirligig
+		Icon = "rbxassetid://7041409606", --change
+		Description = "Warps you and your Nanobots back to the Motherboard and briefly increases Convert Rate.",
+		UseableOnSlot = false,
+		UseableOcc = false,
+	},
+	["Bit Booster"] = { --Field Dice
+		Icon = "rbxassetid://17785800304", --change
+		Description = "Boosts the Bit Rate of a random Data field by +100% for 15 minutes.",
+		UseableOnSlot = false,
+		UseableOcc = false,
+	},
+	["Byte Booster"] = { --Smooth Dice
+		Icon = "rbxassetid://17785800304", --change
+		Description = "Boosts the Bit Rate of 2 random Data fields by +200% for 15 minutes.",
+		UseableOnSlot = false,
+		UseableOcc = false,
+	},
+	["Gigabit Booster"] = { --Loaded Dice
+		Icon = "rbxassetid://17785800304", --change
+		Description = "Boosts the Bit Rate of 3 random Data fields by +300% for 15 minutes. Added bias towards the field you're in.",
+		UseableOnSlot = false,
+		UseableOcc = false,
+	},
+	["Algorithm Jumblers"] = { --Jelly Beans
+		Icon = "rbxassetid://17785800304", --change
+		Description = "Scatters various buff-granting tokens. Works best when shared.",
+		UseableOnSlot = false,
+		UseableOcc = false,
+	},
+	["Red Microchip"] = { --Red Extract
+		Icon = "rbxassetid://2495935291", --change
+		Description = "Grants x1.5 Red Bits for 10 minutes.",
+		UseableOnSlot = false,
+		UseableOcc = false,
+	},
+	["Blue Microchip"] = { --Blue Extract
+		Icon = "rbxassetid://5916120072", --change
+		Description = "Grants x1.5 Blue Bits for 10 minutes.",
+		UseableOnSlot = false,
+		UseableOcc = false,
+	},
+	--[[
+	["Red Extract Buff"] = {
+		StatName = "RedPollen",
+		Info = "x1.5 Red Pollen",
+		Icon = "rbxassetid://2495935291",
+		Clr = Color3.fromRGB(254, 198, 80)
+	},]]
+	["Red Microchip Buff"] = { --Red Extract Buff
+		StatName = "RedBoost",
+		Info = "x1.5 Red Bits",
+		Icon = "rbxassetid://2495935291", --change
+		Clr = Color3.fromRGB(254, 198, 80)
+	},
+	--[[
+	["Blue Extract Buff"] = {
+		StatName = "BluePollen",
+		Info = "x1.5 Blue Pollen",
+		Icon = "rbxassetid://5916120072",
+		Clr = Color3.fromRGB(254, 198, 80)
+	},]]
+	["Blue Microchip Buff"] = { --Blue Extract Buff
+		StatName = "BlueBoost",
+		Info = "x1.5 Blue Bits",
+		Icon = "rbxassetid://5916120072", --change
+		Clr = Color3.fromRGB(254, 198, 80)
+	},
+	
+	["Stardust"] = { --Glitter
+		Icon = "rbxassetid://11473139678", --change
+		Description = "Boosts the field you're standing in, granting +100% Bit Rate for 15 minutes.",
+		UseableOnSlot = false,
+		UseableOcc = true
+	},
+	["Adhesive"] = { --Glue
+		Icon = "rbxassetid://11473139678", --change
+		Description = "Grants x1.25 Nanobot Download Rate and Tool Download Rate for 10 minutes.",
+		UseableOnSlot = false,
+		UseableOcc = true
+	},
+	["Canned Air"] = { --Oil
+		Icon = "rbxassetid://11473139678", --change
+		Description = "Grants x1.2 Nanobot and Player Movespeed for 10 minutes.",
+		UseableOnSlot = false,
+		UseableOcc = true
+	},
+	["Concentrated Signal"] = { --Enzymes
+		Icon = "rbxassetid://11473139678", --change
+		Description = "Grants +10% Instant Upload and x1.25 Upload Rate Rate for 10 minutes.",
+		--Grants +10% Instant Conversion and x1.25 Convert Rate for 10 minutes.
+		UseableOnSlot = false,
+		UseableOcc = true
+	},
+	
+	["Tropical Drink"] = { --Tropical Drink
+		Icon = "rbxassetid://11473139678", --change
+		Description = "Grants x1.25 White Bits, +10% Instant Upload and +5% Critical Chance for 10 minutes.",
+		-- Grants x1.25 White Pollen, +10% Instant Conversion and +5% Critical Chance for 10 minutes.
+		UseableOnSlot = false,
+		UseableOcc = true
+	},
+	["Purple Potion"] = { --Purple Potion
+		Icon = "rbxassetid://11473139678", --change
+		Description = "Grants x1.25 Capacity and the improved boosts of Red and Blue Microchips and Adhesive for 15 minutes.",
+		-- "Grants x1.25 Capacity and the improved boosts of Red and Blue Extracts and Glue for 15 minutes."
+		UseableOnSlot = false,
+		UseableOcc = true
+	},
+	["Super Smoothie"] = { --Super Smoothie
+		Icon = "rbxassetid://11473139678", --change
+		Description = "Grants the improved boosts of many consumable items combined for 20 minutes!",
+		-- Grants the improved boosts of many consumable items combined for 20 minutes!
+		UseableOnSlot = false,
+		UseableOcc = true
+	},
+	--[[
+	["Sprout"] = {
+		Icon = "rbxassetid://18641395540",
+		Description = "Plants a random Sprout in the field you're in",
+		UseableOnSlot = false,
+		UseableOcc = false,
+	},]]
+	["Expansion Seed"] = { --Sprout  FIX GAME DATA RELATED TO SPROUTS
+		Icon = "rbxassetid://18641395540", --change
+		Description = "Creates a random Anomoly in the field you're standing in.",
+		UseableOnSlot = false,
+		UseableOcc = false,
+	},
+	["Cloud Generator"] = { --Cloud Vial
+		Icon = "rbxassetid://18641395540", --change
+		Description = "Summons a Cloud in the field you're standing in. Lasts for 3 minutes.",
+		UseableOnSlot = false,
+		UseableOcc = false,
+	},
+	["Translator"] = { --Translator
+		Icon = "rbxassetid://18641395540", --change
+		Description = "A device used to decipher languages you don't understand.",
+		UseableOnSlot = false,
+		UseableOcc = false,
+	},
+	["Technicolor Cloth"] = { --Spirit Petal
+		Icon = "rbxassetid://18641395540", --change
+		Description = "A beautiful yet painful reminder that the real world exists.",
+		UseableOnSlot = false,
+		UseableOcc = false,
+	},
+	
+	-- TREATS
+	
+	--[[
+	["Treat"] = {
+		Icon = "rbxassetid://11795980198",
+		Description = "Grants 10 Bond to a Bee.",
+		UseableOnSlot = false,
+		UseableOcc = true,
+		FeedBee = true,
+		Bond = 10
+	},]]
+	["Standard Upgrade Chip"] = {
+		Icon = "rbxassetid://11795980198", --change
+		Description = "Gives a Nanobot 10 EXP.",
+		UseableOnSlot = false,
+		UseableOcc = true,
+		FeedBee = true,
+		Bond = 10
+	},
+	--[[
+	["Star Treat"] = {
+		Icon = "rbxassetid://106566337731337",
+		Description = "Turns a bee into a Gifted bee!",
+		UseableOnSlot = false,
+		UseableOcc = true,
+		Bond = 1000
+	},]]
+	["Star Upgrade Chip"] = {
+		Icon = "rbxassetid://106566337731337", --change
+		Description = "Turns a Nanobot into a Gifted Nanobot.",
+		UseableOnSlot = false,
+		UseableOcc = true,
+		Bond = 1000
+	},
+	["Atomic Upgrade Chip"] = {
+		Icon = "rbxassetid://106566337731337", --change
+		Description = "Always causes a random Mutation in a Nanobot! Mutations grant bonus stats.",
+		--"Always causes a random Mutation in a bee! Mutations grant bonus stats."
+		UseableOnSlot = false,
+		UseableOcc = true,
+		Bond = 1000
+	},
+	--[[
+	["Sunflower Seed"] = {
+		Icon = "rbxassetid://11940501292",
+		Description = "",
+		UseableOnSlot = false,
+		UseableOcc = true,
+		FeedBee = true,
+		Bond = 25
+	},]]
+	["Nano Spark"] = { --Sunflower Seed
+		Icon = "rbxassetid://11940501292", --change
+		Description = "Gives a Nanobot 25 EXP.",
+		UseableOnSlot = false,
+		UseableOcc = true,
+		FeedBee = true,
+		Bond = 25
+	},
+	--[[
+	["Strawberry"] = {
+		Icon = "rbxassetid://11940505893",
+		Description = "",
+		UseableOnSlot = false,
+		UseableOcc = true,
+		FeedBee = true,
+		Bond = 25
+	},]]
+	["Thermal Cluster"] = { --Strawberry
+		Icon = "rbxassetid://11940505893", --change
+		Description = "Gives a Nanobot 25 EXP.",
+		UseableOnSlot = false,
+		UseableOcc = true,
+		FeedBee = true,
+		Bond = 25
+	},
+	--[[
+	["Pineapple"] = {
+		Icon = "rbxassetid://11940506169",
+		Description = "",
+		UseableOnSlot = false,
+		UseableOcc = true,
+		FeedBee = true,
+		Bond = 25
+	},]]
+	["Pure Signal"] = {
+		Icon = "rbxassetid://11940506169", --change
+		Description = "Gives a Nanobot 25 EXP.",
+		UseableOnSlot = false,
+		UseableOcc = true,
+		FeedBee = true,
+		Bond = 25
+	},
+	--[[
+	["Blueberry"] = {
+		Icon = "rbxassetid://11940506386",
+		Description = "Gives a Nanobot 25 EXP",
+		UseableOnSlot = false,
+		UseableOcc = true,
+		FeedBee = true,
+		Bond = 25
+	},]]
+	["Cryo Core"] = { --Blueberry
+		Icon = "rbxassetid://11940506386", --change
+		Description = "Gives a Nanobot 25 EXP.",
+		UseableOnSlot = false,
+		UseableOcc = true,
+		FeedBee = true,
+		Bond = 25
+	},
+	
+	["Macrochip Fragment"] = { --New Black Field item
+		Icon = "rbxassetid://11940506169", --change
+		Description = "Gives a Nanobot 25 EXP.",
+		UseableOnSlot = false,
+		UseableOcc = true,
+		FeedBee = true,
+		Bond = 25
+	},
+	["Compressed Plasma"] = { --New Purple Field item
+		Icon = "rbxassetid://11940506169", --change
+		Description = "Gives a Nanobot 25 EXP.",
+		UseableOnSlot = false,
+		UseableOcc = true,
+		FeedBee = true,
+		Bond = 25
+	},
+	
+	["Corrupt Code"] = { --Bitterberry
+		Icon = "rbxassetid://11940506386", --change
+		Description = "Gives a Nanobot 100 EXP. Small change to cause a Mutation.",
+		--"Increases bond with a bee by 100. Small chance to cause Mutations."
+		UseableOnSlot = false,
+		UseableOcc = true,
+		FeedBee = true,
+		Bond = 100
+	},
+	["Hyper Construct"] = { --Neonberry
+		Icon = "rbxassetid://11940506386", --change
+		Description = "Gives a Nanobot 500 EXP and makes it Radioactive for a while.",
+		--"Increases bond with a bee by 500 and makes it Radioactive for a while."
+		UseableOnSlot = false,
+		UseableOcc = true,
+		FeedBee = true,
+		Bond = 500
+	},
+	["Cosmic Matrix"] = { --Moon Charm
+		Icon = "rbxassetid://11940506386", --change
+		Description = "Gives a Nanobot 250 EXP.",
+		UseableOnSlot = false,
+		UseableOcc = true,
+		FeedBee = true,
+		Bond = 250
+	},
+	
+	--PROTOCOL CONVERTERS
+	
+	--[[
 	["Royal Jelly"] = {
 		Icon = "rbxassetid://11473139678",
 		Description = "Hatches into a Random Bee",
@@ -77,84 +441,30 @@ return {
 		Description = "Hatches into a Random Gifted Bee",
 		UseableOnSlot = false,
 		UseableOcc = true
-	},
-	["Treat"] = {
-		Icon = "rbxassetid://11795980198",
-		Description = "Grants 10 Bond to a Bee.",
-		UseableOnSlot = false,
-		UseableOcc = true,
-		FeedBee = true,
-Bond = 10
-	},
-	["Star Treat"] = {
-		Icon = "rbxassetid://106566337731337",
-		Description = "Grants 10 Bond to a Bee.",
-		UseableOnSlot = false,
-		UseableOcc = true,
-		Bond = 1000
-	},
-	["Sunflower Seed"] = {
-		Icon = "rbxassetid://11940501292",
-		Description = "Grants 25 Bond to a Bee.",
-		UseableOnSlot = false,
-		UseableOcc = true,
-		FeedBee = true,
-		Bond = 25
-	},
-	["Strawberry"] = {
-		Icon = "rbxassetid://11940505893",
-		Description = "Grants 25 Bond to a Bee.",
-		UseableOnSlot = false,
-		UseableOcc = true,
-		FeedBee = true,
-		Bond = 25
-	},
-	["Sprout"] = {
-		Icon = "rbxassetid://18641395540",
-		Description = "Spawn A Sprout!.",
-		UseableOnSlot = false,
-		UseableOcc = false,
-	},
-	["Sprinkler"] = {
-		Icon = "rbxassetid://13016351302",
-		Description = "Use while standing in flowers to place a Sprinkler.",
-		UseableOnSlot = false,
-		UseableOcc = false,
-	},
-	["Field Dice"] = {
-		Icon = "rbxassetid://17785800304",
-		Description = "Roll a random field boost!",
-		UseableOnSlot = false,
-		UseableOcc = false,
-	},
-	["Gumdrops"] = {
-		Icon = "rbxassetid://13016678865",
-		Description = "Yummy sticky gummy drops :)",
-		UseableOnSlot = false,
-		UseableOcc = false,
-	},
-	["Pineapple"] = {
-		Icon = "rbxassetid://11940506169",
-		Description = "Grants 25 Bond to a Bee.",
-		UseableOnSlot = false,
-		UseableOcc = true,
-		FeedBee = true,
-		Bond = 25
-	},
-	["Blueberry"] = {
-		Icon = "rbxassetid://11940506386",
-		Description = "Grants 25 Bond to a Bee.",
-		UseableOnSlot = false,
-		UseableOcc = true,
-		FeedBee = true,
-		Bond = 25
-	},
-	["Eviction"] = {
-		Icon = "rbxassetid://11473784801",
-		Description = "Evicts a Bee from its hive.",
+	},]]
+	
+	["Protocol Converter"] = { --Royal Jelly
+		Icon = "rbxassetid://11473139678", --change
+		Description = "Changes into a new Random Nanobot.",
 		UseableOnSlot = false,
 		UseableOcc = true
 	},
+	["Star Protocol Converter"] = { --Star Jelly
+		Icon = "rbxassetid://2485574975", --change
+		Description = "Changes into a new Random Gifted Nanobot.",
+		UseableOnSlot = false,
+		UseableOcc = true
+	},
+	
+	["Eviction"] = {
+		Icon = "rbxassetid://11473784801",
+		Description = "Evicts a Nanobot from its hive.",
+		UseableOnSlot = false,
+		UseableOcc = true
+	},
+	
+	--TOOLS
+	
 	["Tide Popper"] = {
 		ClickSpeed = 0.4,
 		ConvertionRate = 200,
@@ -210,6 +520,9 @@ Bond = 10
 	["Tidal Power"] = {
 	Info = "Each time a tidal wave hits a bubble, it will add up. Stacks until 500 then you get Tidal Surge."	
 	},
+	
+	--BOOSTS
+	
 	["Science Enhancement"] = {
 		StatName = "ConvertVisualGUIRate",
 		Info = "+<ValueAmnt>% Convertion Rate",
@@ -246,6 +559,9 @@ Bond = 10
 		Icon = "rbxassetid://8981932662",
 		Clr = Color3.fromRGB(255, 11, 11)
 	},
+	
+	-- BAGS
+	
 	["Pouch"] = {
 		Description = "A small bag.",
 		Capacity = 150
@@ -254,6 +570,9 @@ Bond = 10
 		Description = "Coconut Canister",
 		Capacity = 10000000
 	},
+	
+	-- MASKS
+	
 	["Honey Mask"] = {
 		Description = "Grants x1.5 Pollen , +250K Capacity and Converts 35%",
 		BlueConvertRate = 35,
@@ -267,6 +586,8 @@ Bond = 10
 		CritChance = 10,
 		CritPower = 0.1,
 	},
+	
+	-- BELTS
 	["Belt Bag"] = {
 		Description = "Grants +20% Pollen , Converts 35%",
 		BlueConvertRate = 35,
@@ -279,6 +600,9 @@ Bond = 10
 		CritChance = 10,
 		CritPower = 0.1,
 	},
+	
+	--SHOULDERS
+	
 	["Red Guard"] = {
 		Description = "Grants +20% Pollen , Converts 35%",
 		BlueConvertRate = 35,
@@ -303,8 +627,11 @@ Bond = 10
 		CritChance = 10,
 		CritPower = 0.1,
 	},
+	
+	--AMULETS
+	
 	["Star Amulet"] = {
-		Description = "Star Amulet 🤑",
+		Description = "Star Amulet",
 		BlueConvertRate = 35,
 		RedConvertRate = 35,
 		WhiteConvertRate = 35,
@@ -315,6 +642,9 @@ Bond = 10
 		CritChance = 10,
 		CritPower = 0.1,
 	},
+	
+	--BOOTS
+	
 	["Basic Boots"] = {
 		Description = "Collect pollen as you walk through flowers!",
 		MovementCollection = 2,
@@ -334,6 +664,8 @@ Bond = 10
 		BuffIcon = ""
 	},
 	
+	--SPRINKLERS
+	--[[
 	["Basic Sprinkler"] = {
 		Description = "When planted in the ground, causes 7 nearby flowers to regrow faster!",
 	},
@@ -348,10 +680,36 @@ Bond = 10
 	},
 	["The Supreme Saturator"] = {
 		Description = "The ultimate sprinkler. Nobody knows how it works or where it came from.",
+	},]]
+	
+	["Basic Data Injector"] = {
+		Description = "One basic injector. When constructed on a Data Node, it replenishes 7 surrounding Node tiles.",
+		--reword
 	},
+	["Silver Data Injectors"] = {
+		Description = "Two injectors, constructed using a sleek material.",
+		--reword
+	},
+	["Golden Data Injectors"] = {
+		Description = "Three gold-plated injectors with enhanced range.",
+		--reword
+	},
+	["Diamond Data Injectors"] = {
+		Description = "Four injectors with enhanced capabilities.",
+		--reword
+	},
+	["Supreme Data Injector"] = {
+		Description = "The ultimate injector. Nobody knows how it works or where it came from.",
+		--reword
+	},
+	
+	
 	["Glider"] = {
-		Description = "Glider! You can glide this everywhere!",
+		Description = "You can glide everywhere!",
 	},
+	
+	-- PLANTERS
+	
 	["Ticket Planter"] = {
 		Icon = "rbxassetid://11459121707",
 		Description = "Grows in 2 hours, gives lots of tickets.",
@@ -366,17 +724,17 @@ Bond = 10
 			},
 			["LootReturn100%"] = {},
 			["Clover Field"] = {
-				["Ticket"] = {40,1,5},
-				["Treat"] = {20,1,25},
+				["Gigabucks"] = {40,1,5},
+				["Standard Upgrade Chip"] = {20,1,25},
 				["Sunflower Seed"] = {20,1,10},
-				["Gumdrops"] = {15,1,6},
+				["Data Corruptors"] = {15,1,6},
 				["Royal Jelly"] = {5,1,3}
 			},
 			["Bamboo Field"] = {
-				["Ticket"] = {40,1,5},
-				["Treat"] = {20,1,15},
+				["Gigabucks"] = {40,1,5},
+				["Standard Upgrade Chip"] = {20,1,15},
 				["Blueberry"] = {20,1,25},
-				["Gumdrops"] = {15,1,6},
+				["Data Corruptors"] = {15,1,6},
 				["Royal Jelly"] = {5,1,3}
 			}
 		}
@@ -394,15 +752,15 @@ Bond = 10
 			},
 			["LootReturn100%"] = {},
 			["Clover Field"] = {
-				["Treat"] = {60,1,10},
+				["Standard Upgrade Chip"] = {60,1,10},
 				["Sunflower Seed"] = {20,1,5},
-				["Gumdrops"] = {15,1,3},
+				["Data Corruptors"] = {15,1,3},
 				["Royal Jelly"] = {5,1,2}
 			},
 			["Bamboo Field"] = {
-				["Treat"] = {20,1,10},
+				["Standard Upgrade Chip"] = {20,1,10},
 				["Blueberry"] = {60,1,5},
-				["Gumdrops"] = {15,1,3},
+				["Data Corruptors"] = {15,1,3},
 				["Royal Jelly"] = {5,1,2}
 			}
 		}
@@ -420,20 +778,21 @@ Bond = 10
 			},
 			["LootReturn100%"] = {},
 			["Clover Field"] = {
-				["Treat"] = {60,1,10},
+				["Standard Upgrade Chip"] = {60,1,10},
 				["Sunflower Seed"] = {20,1,5},
-				["Gumdrops"] = {15,1,3},
+				["Data Corruptors"] = {15,1,3},
 				["Royal Jelly"] = {5,1,2}
 			},
 			["Bamboo Field"] = {
-				["Treat"] = {20,1,10},
+				["Standard Upgrade Chip"] = {20,1,10},
 				["Blueberry"] = {60,1,5},
-				["Gumdrops"] = {15,1,3},
+				["Data Corruptors"] = {15,1,3},
 				["Royal Jelly"] = {5,1,2}
 			}
 		}
 	},
 
+	--PUFFSHROOMS & SPROUTS
 	
 	["Common"] = {
 		[1] = 10000,
@@ -525,15 +884,15 @@ Bond = 10
 	["Legendary Puffshroom"] = 2.7,
 	["Mythic Puffshroom"] = 3.6,
 	["Puffdrops"] = {
-		["Treat"] = {60,1,3},
+		["Standard Upgrade Chip"] = {60,1,3},
 		["Strawberry"] = {7,1,3},
 		["Blueberry"] = {7,1,3},
 		["Pineapple"] = {7,1,3},
 		["Sunflower Seed"] = {7,1,3},
 		["Royal Jelly"] = {2,1,2},
-		["Gumdrops"] = {5,1,3},
-		["Ticket"] = {4.5,1,3},
-		["Mythic Egg"] = {0.5,1,1}
+		["Data Corruptors"] = {5,1,3},
+		["Gigabucks"] = {4.5,1,3},
+		["Mythic Nano-Mod"] = {0.5,1,1}
 	},
 	
 	["BasicSprout"] = {
@@ -546,25 +905,25 @@ Bond = 10
 		["Loot"] = {
 
 			["Clover Field"] = {
-				["Treat"] = 50,	
+				["Standard Upgrade Chip"] = 50,	
 				["Strawberry"] = 25,
-				["Ticket"] = 5,
+				["Gigabucks"] = 5,
 				["Royal Jelly"] = 5,
 
 
 			},
 			["Pepper Field"] = {
-				["Treat"] = 25,	
+				["Standard Upgrade Chip"] = 25,	
 				["Strawberry"] = 50,
-				["Ticket"] = 5,
+				["Gigabucks"] = 5,
 				["Royal Jelly"] = 5,
 
 
 			},
 			["Bamboo Field"] = {
-				["Treat"] = 25,	
+				["Standard Upgrade Chip"] = 25,	
 				["BlueBerry"] = 50,
-				["Ticket"] = 5,
+				["Gigabucks"] = 5,
 				["Royal Jelly"] = 5,
 
 
@@ -574,24 +933,24 @@ Bond = 10
 
 			["Clover Field"] = {
 				["Strawberry"] = 1,
-				["Treat"] = 2,
-				["Ticket"] = 1,
+				["Standard Upgrade Chip"] = 2,
+				["Gigabucks"] = 1,
 				["Royal Jelly"] = 1,
 
 
 			},
 			["Bamboo Field"] = {
 				["Blueberry"] = 1,
-				["Treat"] = 2,
-				["Ticket"] = 1,
+				["Standard Upgrade Chip"] = 2,
+				["Gigabucks"] = 1,
 				["Royal Jelly"] = 1,
 
 
 			},
 			["Pepper Field"] = {
 				["Strawberry"] = 1,
-				["Treat"] = 2,
-				["Ticket"] = 1,
+				["Standard Upgrade Chip"] = 2,
+				["Gigabucks"] = 1,
 				["Royal Jelly"] = 1,
 
 
@@ -608,25 +967,25 @@ Bond = 10
 		["Loot"] = {
 
 			["Clover Field"] = {
-				["Treat"] = 50,	
+				["Standard Upgrade Chip"] = 50,	
 				["Strawberry"] = 25,
-				["Ticket"] = 5,
+				["Gigabucks"] = 5,
 				["Royal Jelly"] = 5,
 
 
 			},
 			["Pepper Field"] = {
-				["Treat"] = 25,	
+				["Standard Upgrade Chip"] = 25,	
 				["Strawberry"] = 50,
-				["Ticket"] = 5,
+				["Gigabucks"] = 5,
 				["Royal Jelly"] = 5,
 
 
 			},
 			["Bamboo Field"] = {
-				["Treat"] = 25,	
+				["Standard Upgrade Chip"] = 25,	
 				["BlueBerry"] = 50,
-				["Ticket"] = 5,
+				["Gigabucks"] = 5,
 				["Royal Jelly"] = 5,
 
 
@@ -636,24 +995,24 @@ Bond = 10
 
 			["Clover Field"] = {
 				["Strawberry"] = 1,
-				["Treat"] = 2,
-				["Ticket"] = 1,
+				["Standard Upgrade Chip"] = 2,
+				["Gigabucks"] = 1,
 				["Royal Jelly"] = 1,
 
 
 			},
 			["Bamboo Field"] = {
 				["Blueberry"] = 1,
-				["Treat"] = 2,
-				["Ticket"] = 1,
+				["Standard Upgrade Chip"] = 2,
+				["Gigabucks"] = 1,
 				["Royal Jelly"] = 1,
 
 
 			},
 			["Pepper Field"] = {
 				["Strawberry"] = 1,
-				["Treat"] = 2,
-				["Ticket"] = 1,
+				["Standard Upgrade Chip"] = 2,
+				["Gigabucks"] = 1,
 				["Royal Jelly"] = 1,
 
 
@@ -670,25 +1029,25 @@ Bond = 10
 		["Loot"] = {
 
 			["Clover Field"] = {
-				["Treat"] = 50,	
+				["Standard Upgrade Chip"] = 50,	
 				["Strawberry"] = 25,
-				["Ticket"] = 5,
+				["Gigabucks"] = 5,
 				["Royal Jelly"] = 5,
 
 
 			},
 			["Pepper Field"] = {
-				["Treat"] = 25,	
+				["Standard Upgrade Chip"] = 25,	
 				["Strawberry"] = 50,
-				["Ticket"] = 5,
+				["Gigabucks"] = 5,
 				["Royal Jelly"] = 5,
 
 
 			},
 			["Bamboo Field"] = {
-				["Treat"] = 25,	
+				["Standard Upgrade Chip"] = 25,	
 				["BlueBerry"] = 50,
-				["Ticket"] = 5,
+				["Gigabucks"] = 5,
 				["Royal Jelly"] = 5,
 
 
@@ -698,24 +1057,24 @@ Bond = 10
 
 			["Clover Field"] = {
 				["Strawberry"] = 1,
-				["Treat"] = 2,
-				["Ticket"] = 1,
+				["Standard Upgrade Chip"] = 2,
+				["Gigabucks"] = 1,
 				["Royal Jelly"] = 1,
 
 
 			},
 			["Bamboo Field"] = {
 				["Blueberry"] = 1,
-				["Treat"] = 2,
-				["Ticket"] = 1,
+				["Standard Upgrade Chip"] = 2,
+				["Gigabucks"] = 1,
 				["Royal Jelly"] = 1,
 
 
 			},
 			["Pepper Field"] = {
 				["Strawberry"] = 1,
-				["Treat"] = 2,
-				["Ticket"] = 1,
+				["Standard Upgrade Chip"] = 2,
+				["Gigabucks"] = 1,
 				["Royal Jelly"] = 1,
 
 
@@ -732,25 +1091,25 @@ Bond = 10
 		["Loot"] = {
 
 			["Clover Field"] = {
-				["Treat"] = 50,	
+				["Standard Upgrade Chip"] = 50,	
 				["Strawberry"] = 25,
-				["Ticket"] = 5,
+				["Gigabucks"] = 5,
 				["Royal Jelly"] = 5,
 
 
 			},
 			["Pepper Field"] = {
-				["Treat"] = 25,	
+				["Standard Upgrade Chip"] = 25,	
 				["Strawberry"] = 50,
-				["Ticket"] = 5,
+				["Gigabucks"] = 5,
 				["Royal Jelly"] = 5,
 
 
 			},
 			["Bamboo Field"] = {
-				["Treat"] = 25,	
+				["Standard Upgrade Chip"] = 25,	
 				["BlueBerry"] = 50,
-				["Ticket"] = 5,
+				["Gigabucks"] = 5,
 				["Royal Jelly"] = 5,
 
 
@@ -760,24 +1119,24 @@ Bond = 10
 
 			["Clover Field"] = {
 				["Strawberry"] = 1,
-				["Treat"] = 2,
-				["Ticket"] = 1,
+				["Standard Upgrade Chip"] = 2,
+				["Gigabucks"] = 1,
 				["Royal Jelly"] = 1,
 
 
 			},
 			["Bamboo Field"] = {
 				["Blueberry"] = 1,
-				["Treat"] = 2,
-				["Ticket"] = 1,
+				["Standard Upgrade Chip"] = 2,
+				["Gigabucks"] = 1,
 				["Royal Jelly"] = 1,
 
 
 			},
 			["Pepper Field"] = {
 				["Strawberry"] = 1,
-				["Treat"] = 2,
-				["Ticket"] = 1,
+				["Standard Upgrade Chip"] = 2,
+				["Gigabucks"] = 1,
 				["Royal Jelly"] = 1,
 
 
@@ -794,25 +1153,25 @@ Bond = 10
 		["Loot"] = {
 
 			["Clover Field"] = {
-				["Treat"] = 50,	
+				["Standard Upgrade Chip"] = 50,	
 				["Strawberry"] = 25,
-				["Ticket"] = 5,
+				["Gigabucks"] = 5,
 				["Royal Jelly"] = 5,
 
 
 			},
 			["Pepper Field"] = {
-				["Treat"] = 25,	
+				["Standard Upgrade Chip"] = 25,	
 				["Strawberry"] = 50,
-				["Ticket"] = 5,
+				["Gigabucks"] = 5,
 				["Royal Jelly"] = 5,
 
 
 			},
 			["Bamboo Field"] = {
-				["Treat"] = 25,	
+				["Standard Upgrade Chip"] = 25,	
 				["BlueBerry"] = 50,
-				["Ticket"] = 5,
+				["Gigabucks"] = 5,
 				["Royal Jelly"] = 5,
 
 
@@ -822,24 +1181,24 @@ Bond = 10
 
 			["Clover Field"] = {
 				["Strawberry"] = 1,
-				["Treat"] = 2,
-				["Ticket"] = 1,
+				["Standard Upgrade Chip"] = 2,
+				["Gigabucks"] = 1,
 				["Royal Jelly"] = 1,
 
 
 			},
 			["Bamboo Field"] = {
 				["Blueberry"] = 1,
-				["Treat"] = 2,
-				["Ticket"] = 1,
+				["Standard Upgrade Chip"] = 2,
+				["Gigabucks"] = 1,
 				["Royal Jelly"] = 1,
 
 
 			},
 			["Pepper Field"] = {
 				["Strawberry"] = 1,
-				["Treat"] = 2,
-				["Ticket"] = 1,
+				["Standard Upgrade Chip"] = 2,
+				["Gigabucks"] = 1,
 				["Royal Jelly"] = 1,
 
 
